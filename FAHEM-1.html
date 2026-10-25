@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<title>FAHEM | فاهم — التوقيع الإلكتروني</title>
+<style>
+:root{--ink:#171717;--muted:#737373;--line:#e8e8e8;--soft:#f7f7f7;--accent:#171717;--green:#16794b;--danger:#b42318}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;line-height:1.6}
+button,input,select{font:inherit}button{cursor:pointer}.wrap{width:min(100% - 28px,980px);margin:auto}
+header{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:68px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}.logo{width:38px;height:38px;border:1.5px solid #222;border-radius:12px;display:grid;place-items:center;font-weight:850;letter-spacing:-1px}.brand strong{font-size:19px;letter-spacing:1.5px}.brand small{display:block;color:var(--muted);font-size:11px;margin-top:-5px}.navlinks{display:flex;gap:7px;flex-wrap:wrap}.navlinks a{color:#444;text-decoration:none;font-size:13px;padding:8px 10px;border-radius:9px}.navlinks a:hover{background:var(--soft)}
+.hero{padding:42px 0 24px}.eyebrow{font-size:12px;color:#555;letter-spacing:1.6px;font-weight:750}.hero h1{font-size:clamp(29px,6vw,48px);line-height:1.2;letter-spacing:-1px;margin:9px 0 12px}.hero p{color:var(--muted);max-width:640px;margin:0;font-size:15px}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.btn{border:1px solid #222;background:#171717;color:#fff;padding:11px 16px;border-radius:11px;font-weight:700;font-size:14px;display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px}.btn.secondary{background:#fff;color:#222;border-color:#dedede}.btn.ghost{background:transparent;color:#444;border-color:transparent}.btn:disabled{opacity:.45;cursor:not-allowed}.btn.small{padding:7px 11px;min-height:36px;font-size:12px;border-radius:9px}
+.feature-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:22px 0 32px}.feature{border:1px solid var(--line);border-radius:15px;padding:15px;background:#fff}.feature .ico{font-size:19px}.feature strong{display:block;font-size:14px;margin-top:5px}.feature span{font-size:12px;color:var(--muted)}
+main{padding-bottom:50px}.section{margin:20px 0 24px;scroll-margin-top:85px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:10px;margin-bottom:12px}.section-head h2{font-size:22px;margin:0;letter-spacing:-.4px}.section-head p{font-size:12px;color:var(--muted);margin:3px 0 0}.panel{border:1px solid var(--line);border-radius:18px;padding:16px;background:#fff;box-shadow:0 4px 20px rgba(0,0,0,.025)}.toolbar{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:12px}.field{display:flex;flex-direction:column;gap:5px;min-width:110px;flex:1}.field label{font-size:12px;color:#555;font-weight:650}.field input[type=color]{height:39px;width:100%;padding:4px;border:1px solid var(--line);border-radius:9px;background:#fff}.field input[type=range]{width:100%;accent-color:#222}.field select,.field input[type=text],.field input[type=number]{border:1px solid var(--line);border-radius:9px;padding:9px;background:#fff;min-height:39px;max-width:100%}
+.canvas-shell{border:1px solid #dedede;border-radius:14px;overflow:hidden;background:repeating-conic-gradient(#fafafa 0% 25%,#fff 0% 50%) 50% / 18px 18px;position:relative}.canvas-shell canvas{width:100%;height:230px;display:block;touch-action:none;cursor:crosshair}.canvas-hint{font-size:11px;color:#777;text-align:center;margin:9px 0 0}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.status{font-size:12px;color:var(--muted);margin-top:9px;min-height:18px}.status.ok{color:var(--green)}.status.err{color:var(--danger)}
+.divider{height:1px;background:var(--line);margin:18px 0}.text-sign{display:flex;gap:9px;align-items:end;flex-wrap:wrap}.text-sign .field{min-width:180px}.signature-font{font-family:"Segoe Script","Brush Script MT",cursive;font-style:italic;font-size:clamp(25px,6vw,38px);letter-spacing:.4px}
+.pdf-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}.dropzone{border:1.5px dashed #d3d3d3;border-radius:14px;padding:22px;text-align:center;background:#fcfcfc}.dropzone strong{display:block;font-size:15px}.dropzone p{color:var(--muted);font-size:12px;margin:4px 0 12px}.dropzone input{max-width:100%;font-size:12px}.pdf-controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:12px 0}.pdf-controls .field{flex:0 1 130px}.pdf-view{position:relative;max-width:100%;margin:0 auto;border:1px solid var(--line);background:#f4f4f4;border-radius:10px;overflow:hidden;display:none;touch-action:pan-y}.pdf-view canvas{display:block;width:100%;height:auto}.pdf-overlay{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none}.pdf-stamp{position:absolute;left:50%;top:72%;width:32%;min-width:75px;max-width:70%;border:1px dashed #777;background:rgba(255,255,255,.25);touch-action:none;cursor:move;pointer-events:auto;user-select:none}.pdf-stamp img{display:block;width:100%;height:auto;pointer-events:none}.pdf-stamp .handle{position:absolute;left:-6px;top:-6px;width:12px;height:12px;background:#171717;border:2px solid #fff;border-radius:50%;cursor:nwse-resize}.pdf-stamp-label{position:absolute;bottom:100%;right:0;background:#171717;color:white;font-size:10px;padding:2px 6px;border-radius:4px;white-space:nowrap}
+.pdf-placeholder{display:none;text-align:center;padding:28px 10px;color:var(--muted);font-size:13px}.tips{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.tip{border:1px solid var(--line);border-radius:13px;padding:13px}.tip strong{font-size:13px}.tip p{font-size:12px;color:var(--muted);margin:4px 0 0}
+footer{border-top:1px solid var(--line);padding:22px 0 32px;color:var(--muted);font-size:12px}.footer-row{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.notice{font-size:11px;color:#666;background:#fafafa;border:1px solid var(--line);padding:11px 12px;border-radius:11px;margin-top:13px}
+.hidden{display:none!important}
+@media(min-width:720px){.hero{padding-top:58px}.feature-row{gap:14px}.feature{padding:18px}.pdf-layout{grid-template-columns:300px minmax(0,1fr);align-items:start}.pdf-sidebar{position:sticky;top:85px}.canvas-shell canvas{height:270px}.panel{padding:20px}}
+@media(max-width:520px){.nav{min-height:60px}.brand strong{font-size:17px}.navlinks a{font-size:12px;padding:7px}.hero{padding-top:30px}.feature-row{grid-template-columns:1fr;gap:8px}.feature{display:flex;gap:10px;align-items:center;padding:11px 13px}.feature .ico{font-size:20px}.feature strong{margin:0}.feature span{display:block}.section-head h2{font-size:20px}.panel{padding:12px}.canvas-shell canvas{height:205px}.tips{grid-template-columns:1fr}.btn{flex:0 0 auto}.hero-actions .btn{flex:1}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap nav">
+  <a class="brand" href="#" aria-label="FAHEM home"><span class="logo">F.</span><span><strong>FAHEM</strong><small>فاهم · توقيعك بطريقتك</small></span></a>
+  <nav class="navlinks"><a href="#signature">ارسم توقيعك</a><a href="#pdf">توقيع PDF</a><a href="#tools">الأدوات</a></nav>
+ </div>
+</header>
+<div class="wrap">
+ <section class="hero">
+  <div class="eyebrow">توقيع إلكتروني — بسيط وآمن</div>
+  <h1>توقيعك، بطريقتك.</h1>
+  <p>ارسم توقيعك بإصبعك، خصّص شكله، نزّله كصورة شفافة أو أضفه إلى ملف PDF. بدون حساب وبدون رفع ملفاتك إلى خادم.</p>
+  <div class="hero-actions"><a class="btn" href="#signature">✍ ابدأ التوقيع</a><a class="btn secondary" href="#pdf">▤ وقّع ملف PDF</a></div>
+ </section>
+ <div class="feature-row">
+  <div class="feature"><div class="ico">✍️</div><div><strong>ارسم بحرية</strong><span>يدعم اللمس والماوس</span></div></div>
+  <div class="feature"><div class="ico">◈</div><div><strong>خلفية شفافة</strong><span>صورة PNG جاهزة للاستخدام</span></div></div>
+  <div class="feature"><div class="ico">▤</div><div><strong>توقيع PDF</strong><span>ضع توقيعك واحفظ نسخة</span></div></div>
+ </div>
+ <main>
+  <section class="section" id="signature">
+   <div class="section-head"><div><h2>أنشئ توقيعك</h2><p>ارسم داخل المساحة أدناه، أو اكتب اسمك لتجربة شكل توقيع.</p></div></div>
+   <div class="panel">
+    <div class="toolbar">
+     <div class="field"><label for="penColor">لون القلم</label><input id="penColor" type="color" value="#171717"></div>
+     <div class="field"><label for="penWidth">سماكة القلم: <span id="widthLabel">3</span></label><input id="penWidth" type="range" min="1" max="12" value="3"></div>
+     <div class="field"><label for="penStyle">شكل الخط</label><select id="penStyle"><option value="round">ناعم</option><option value="square">مستقيم</option></select></div>
+    </div>
+    <div class="canvas-shell"><canvas id="signatureCanvas" aria-label="مساحة رسم التوقيع"></canvas></div>
+    <p class="canvas-hint">استخدم إصبعك أو القلم الإلكتروني. الخلفية المربعة للمعاينة فقط.</p>
+    <div class="actions">
+     <button class="btn secondary small" id="undoBtn">↶ تراجع</button>
+     <button class="btn secondary small" id="clearBtn">مسح التوقيع</button>
+     <button class="btn small" id="downloadBtn">تنزيل PNG ↓</button>
+    </div>
+    <div class="status" id="signatureStatus" role="status"></div>
+    <div class="divider"></div>
+    <div class="section-head"><div><h2 style="font-size:17px">أو اكتب اسمك</h2><p>هذه معاينة بخط متصل، وقد يختلف شكلها حسب الجهاز.</p></div></div>
+    <div class="text-sign">
+     <div class="field"><label for="typedName">الاسم أو الأحرف</label><input type="text" id="typedName" placeholder="اكتب اسمك هنا" maxlength="50"></div>
+     <div class="field" style="max-width:145px"><label for="textColor">لون الاسم</label><input type="color" id="textColor" value="#171717"></div>
+     <button class="btn secondary" id="useNameBtn">اعرضه في المعاينة</button>
+    </div>
+    <div id="typedPreview" class="signature-font" style="min-height:48px;margin-top:12px;color:#171717;overflow-wrap:anywhere"></div>
+    <div class="actions"><button class="btn secondary small" id="drawNameBtn">استخدم الاسم كصورة توقيع</button></div>
+    <div class="notice">ملاحظة: التوقيع الناتج صورة مرئية فقط؛ لا يثبت هوية الموقّع ولا يضيف شهادة رقمية أو تحققاً قانونياً.</div>
+   </div>
+  </section>
+  <section class="section" id="pdf">
+   <div class="section-head"><div><h2>وقّع ملف PDF</h2><p>اختر ملفاً من جهازك، ضع توقيعك على الصفحة ثم احفظ نسخة جديدة.</p></div></div>
+   <div class="panel">
+    <div class="pdf-layout">
+     <div class="pdf-sidebar">
+      <div class="dropzone">
+       <strong>اختر مستند PDF</strong><p>المعالجة تتم داخل المتصفح على جهازك.</p>
+       <input id="pdfFile" type="file" accept="application/pdf,.pdf">
+      </div>
+      <div class="pdf-controls">
+       <button class="btn secondary small" id="prevPage" disabled>← السابقة</button>
+       <button class="btn secondary small" id="nextPage" disabled>التالية →</button>
+       <div class="field"><label for="pageNum">رقم الصفحة</label><input id="pageNum" type="number" min="1" value="1" disabled></div>
+      </div>
+      <div class="field"><label for="stampWidth">حجم التوقيع: <span id="stampWidthLabel">32%</span></label><input id="stampWidth" type="range" min="10" max="70" value="32"></div>
+      <div class="actions"><button class="btn" id="savePdfBtn" disabled>حفظ PDF الموقّع ↓</button><button class="btn secondary small" id="resetStamp" disabled>إعادة موضع التوقيع</button></div>
+      <div class="status" id="pdfStatus" role="status">اختر ملف PDF للبدء.</div>
+      <div class="notice">اسحب التوقيع داخل الصفحة لتغيير مكانه. تغيير الصفحة لا يغيّر التوقيع المرسوم في أداة التوقيع أعلاه.</div>
+     </div>
+     <div>
+      <div id="pdfView" class="pdf-view"><canvas id="pdfCanvas"></canvas><div class="pdf-overlay"><div id="pdfStamp" class="pdf-stamp"><span class="pdf-stamp-label">اسحب التوقيع</span><img id="pdfStampImg" alt="معاينة التوقيع"><span class="handle" id="resizeHandle" title="غيّر الحجم"></span></div></div></div>
+      <div id="pdfPlaceholder" class="pdf-placeholder">معاينة ملف PDF تظهر هنا بعد اختيار الملف.</div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="section" id="tools">
+   <div class="section-head"><div><h2>الأدوات والملاحظات</h2><p>مصمم للعمل على شاشة الموبايل والحاسوب.</p></div></div>
+   <div class="tips">
+    <div class="tip"><strong>↶ التراجع</strong><p>يرجع خطوة من الرسم الأخير حتى تعدّل التوقيع بسهولة.</p></div>
+    <div class="tip"><strong>⬇ تنزيل PNG</strong><p>يحفظ التوقيع بخلفية شفافة، لتتمكن من إدراجه في مستندات أخرى.</p></div>
+    <div class="tip"><strong>▤ حفظ PDF</strong><p>ينشئ نسخة جديدة من المستند ويترك الملف الأصلي كما هو.</p></div>
+    <div class="tip"><strong>🔒 خصوصية ملفاتك</strong><p>الملفات لا تُرفع من هذه الصفحة إلى خادم. مكتبات PDF تُحمّل من الإنترنت عند الحاجة.</p></div>
+   </div>
+  </section>
+ </main>
+</div>
+<footer><div class="wrap footer-row"><span><strong style="color:#222;letter-spacing:1px">FAHEM</strong> · فاهم</span><span>أداة مجانية لإنشاء صور التوقيع وتوقيع ملفات PDF.</span></div><div class="wrap" style="margin-top:10px">لا تستخدم صورة توقيع كبديل عن التوقيع الرقمي المعتمد عندما يتطلب المستند ذلك.</div></footer>
+<script>
+(() => {
+const $ = id => document.getElementById(id);
+const canvas=$('signatureCanvas'), ctx=canvas.getContext('2d');
+let drawing=false, last=null, strokes=[], currentStroke=null, ratio=1;
+function resizeCanvas(){
+ const rect=canvas.getBoundingClientRect(), old=document.createElement('canvas'); old.width=canvas.width;old.height=canvas.height;
+ if(old.width&&old.height)old.getContext('2d').drawImage(canvas,0,0);
+ ratio=Math.max(1,window.devicePixelRatio||1);canvas.width=Math.round(rect.width*ratio);canvas.height=Math.round(rect.height*ratio);
+ ctx.setTransform(ratio,0,0,ratio,0,0);ctx.lineCap=$('penStyle').value;ctx.lineJoin='round';
+ ctx.clearRect(0,0,rect.width,rect.height);if(old.width&&old.height)ctx.drawImage(old,0,0,old.width,old.height,0,0,rect.width,rect.height);
+}
+function pos(e){const r=canvas.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top}}
+function start(e){e.preventDefault();drawing=true;canvas.setPointerCapture?.(e.pointerId);last=pos(e);currentStroke={color:$('penColor').value,width:+$('penWidth').value,points:[last]};strokes.push(currentStroke);ctx.beginPath();ctx.fillStyle=currentStroke.color;ctx.arc(last.x,last.y,currentStroke.width/2,0,Math.PI*2);ctx.fill()}
+function move(e){if(!drawing)return;e.preventDefault();const p=pos(e);currentStroke.points.push(p);ctx.strokeStyle=currentStroke.color;ctx.lineWidth=currentStroke.width;ctx.lineCap=$('penStyle').value;ctx.lineJoin='round';ctx.beginPath();ctx.moveTo(last.x,last.y);ctx.lineTo(p.x,p.y);ctx.stroke();last=p}
+function end(){drawing=false;last=null;currentStroke=null}
+canvas.addEventListener('pointerdown',start);canvas.addEventListener('pointermove',move);canvas.addEventListener('pointerup',end);canvas.addEventListener('pointercancel',end);
+function redraw(){const r=canvas.getBoundingClientRect();ctx.clearRect(0,0,r.width,r.height);for(const s of strokes){if(!s.points.length)continue;ctx.strokeStyle=s.color;ctx.fillStyle=s.color;ctx.lineWidth=s.width;ctx.lineCap=$('penStyle').value;ctx.lineJoin='round';if(s.points.length===1){ctx.beginPath();ctx.arc(s.points[0].x,s.points[0].y,s.width/2,0,Math.PI*2);ctx.fill()}else{ctx.beginPath();ctx.moveTo(s.points[0].x,s.points[0].y);for(let i=1;i<s.points.length;i++)ctx.lineTo(s.points[i].x,s.points[i].y);ctx.stroke()}}}
+function clear(){strokes=[];redraw();$('signatureStatus').textContent='تم مسح مساحة التوقيع.';$('signatureStatus').className='status'}
+$('clearBtn').addEventListener('click',clear);
+$('undoBtn').addEventListener('click',()=>{strokes.pop();redraw();$('signatureStatus').textContent='تم التراجع عن آخر خطوة.'});
+$('penWidth').addEventListener('input',()=> $('widthLabel').textContent=$('penWidth').value);
+$('penStyle').addEventListener('change',redraw);
+function exportSignature(){
+ if(generatedSignature){const copy=document.createElement('canvas');copy.width=generatedSignature.width;copy.height=generatedSignature.height;copy.getContext('2d').drawImage(generatedSignature,0,0);return copy}
+ if(!strokes.length){$('signatureStatus').textContent='ارسم توقيعك أولاً أو استخدم الاسم المكتوب أدناه.';$('signatureStatus').className='status err';return null}
+ const r=canvas.getBoundingClientRect(), out=document.createElement('canvas');out.width=Math.round(r.width*2);out.height=Math.round(r.height*2);
+ const o=out.getContext('2d');o.scale(2,2);
+ for(const s of strokes){if(!s.points.length)continue;o.strokeStyle=s.color;o.fillStyle=s.color;o.lineWidth=s.width;o.lineCap=$('penStyle').value;o.lineJoin='round';if(s.points.length===1){o.beginPath();o.arc(s.points[0].x,s.points[0].y,s.width/2,0,Math.PI*2);o.fill()}else{o.beginPath();o.moveTo(s.points[0].x,s.points[0].y);for(let i=1;i<s.points.length;i++)o.lineTo(s.points[i].x,s.points[i].y);o.stroke()}}
+ return out;
+}
+function downloadBlob(blob,name){const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1500)}
+$('useNameBtn').addEventListener('click',()=>{const name=$('typedName').value.trim();$('typedPreview').textContent=name;$('typedPreview').style.color=$('textColor').value});
+$('textColor').addEventListener('input',()=> $('typedPreview').style.color=$('textColor').value);
+$('drawNameBtn').addEventListener('click',()=>{const name=$('typedName').value.trim();if(!name){$('signatureStatus').textContent='اكتب اسمك أولاً.';$('signatureStatus').className='status err';return}
+ clear();const r=canvas.getBoundingClientRect();ctx.save();ctx.fillStyle=$('textColor').value;ctx.textAlign='center';ctx.textBaseline='middle';ctx.font='italic 42px "Segoe Script","Brush Script MT",cursive';ctx.fillText(name,r.width/2,r.height/2, r.width-24);ctx.restore();
+ // Store the generated name as a single raster-like stroke so export and PDF use it.
+ const image=new Image();image.onload=()=>{strokes=[{color:$('textColor').value,width:1,points:[]}];generatedSignature=image;$('signatureStatus').textContent='تم إنشاء معاينة الاسم. تقدر تنزّله أو تستخدمه في PDF.';$('signatureStatus').className='status ok'};image.src=canvas.toDataURL('image/png');
+});
+let generatedSignature=null;
+const originalExport=exportSignature;
+function getSignatureBlobCanvas(){return originalExport()}
+$('clearBtn').addEventListener('click',()=>{generatedSignature=null});
+canvas.addEventListener('pointerdown',()=>{generatedSignature=null});
+$('downloadBtn').addEventListener('click',()=>{const out=getSignatureBlobCanvas();if(!out)return;out.toBlob(b=>{downloadBlob(b,'fahem-signature.png');$('signatureStatus').textContent='تم تجهيز صورة التوقيع للتنزيل.';$('signatureStatus').className='status ok'},'image/png')});
+function dataURLtoBlob(data){const a=data.split(','),m=a[0].match(/:(.*?);/)[1],b=atob(a[1]),u=new Uint8Array(b.length);for(let i=0;i<b.length;i++)u[i]=b.charCodeAt(i);return new Blob([u],{type:m})}
+let pdfBytes=null,pdfDoc=null,pdfPageCount=0,currentPage=1,pdfjs=null,signatureData=null,signatureImg=null,stamp={x:.5,y:.72,w:.32};
+const pdfCanvas=$('pdfCanvas'),pdfCtx=pdfCanvas.getContext('2d'),pdfView=$('pdfView'),stampEl=$('pdfStamp');
+function pdfStatus(t,kind=''){ $('pdfStatus').textContent=t;$('pdfStatus').className='status '+kind}
+async function loadScript(src){return new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=src;s.onload=resolve;s.onerror=()=>reject(new Error('تعذر تحميل مكتبة PDF. تحقق من اتصال الإنترنت.'));document.head.appendChild(s)})}
+async function ensurePdfLib(){if(!window.PDFLib)await loadScript('https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js');if(!window.pdfjsLib){await loadScript('https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js');window.pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js'}}
+$('pdfFile').addEventListener('change',async e=>{
+ const file=e.target.files&&e.target.files[0];if(!file)return;if(file.type!=='application/pdf'&&!file.name.toLowerCase().endsWith('.pdf')){pdfStatus('الملف المختار ليس PDF.','err');return}
+ try{pdfStatus('جاري فتح الملف وتحضير المعاينة…');await ensurePdfLib();pdfBytes=await file.arrayBuffer();const task=pdfjsLib.getDocument({data:new Uint8Array(pdfBytes)});pdfDoc=await task.promise;pdfPageCount=pdfDoc.numPages;currentPage=1;$('pageNum').disabled=false;$('pageNum').max=pdfPageCount;$('pageNum').value=1;$('prevPage').disabled=false;$('nextPage').disabled=false;$('savePdfBtn').disabled=false;$('resetStamp').disabled=false;pdfView.style.display='block';$('pdfPlaceholder').style.display='none';await renderPage();pdfStatus('تم فتح الملف. حرّك التوقيع إلى المكان المطلوب.','ok')}
+ catch(err){console.error(err);pdfStatus(err.message||'تعذر فتح PDF. جرّب ملفاً آخر.','err')}
+});
+async function renderPage(){if(!pdfDoc)return;const page=await pdfDoc.getPage(currentPage),base=page.getViewport({scale:1}),maxWidth=Math.min(window.innerWidth-58,720),scale=Math.min(maxWidth/base.width,1.8),vp=page.getViewport({scale});pdfCanvas.width=Math.floor(vp.width*2);pdfCanvas.height=Math.floor(vp.height*2);pdfCanvas.style.width=vp.width+'px';pdfCanvas.style.height=vp.height+'px';pdfView.style.width=vp.width+'px';pdfView.style.maxWidth='100%';await page.render({canvasContext:pdfCtx,viewport:page.getViewport({scale:scale*2})}).promise;
+ // preview canvas pixel dimensions correspond to 2x CSS scale; use CSS scale from viewport.
+ $('pageNum').value=currentPage;stampEl.style.left=(stamp.x*100)+'%';stampEl.style.top=(stamp.y*100)+'%';stampEl.style.width=(+$('stampWidth').value)+'%';await updateStampImage();
+}
+function updateStampImage(){const out=getSignatureBlobCanvas();if(!out){stampEl.style.display='none';signatureData=null;return}stampEl.style.display='block';signatureData=out.toDataURL('image/png');$('pdfStampImg').src=signatureData}
+function refreshSignature(){const out=getSignatureBlobCanvas();if(out){signatureData=out.toDataURL('image/png');$('pdfStampImg').src=signatureData;stampEl.style.display='block'}else{signatureData=null;stampEl.style.display='none'}}
+$('prevPage').addEventListener('click',async()=>{if(currentPage>1){currentPage--;await renderPage()}});
+$('nextPage').addEventListener('click',async()=>{if(currentPage<pdfPageCount){currentPage++;await renderPage()}});
+$('pageNum').addEventListener('change',async()=>{const n=Math.max(1,Math.min(pdfPageCount,parseInt($('pageNum').value)||1));currentPage=n;await renderPage()});
+$('stampWidth').addEventListener('input',()=>{$('stampWidthLabel').textContent=$('stampWidth').value+'%';stamp.w=+$('stampWidth').value/100;stampEl.style.width=$('stampWidth').value+'%'});
+$('resetStamp').addEventListener('click',()=>{stamp={x:.5,y:.72,w:+$('stampWidth').value/100};stampEl.style.left='50%';stampEl.style.top='72%';stampEl.style.width=$('stampWidth').value+'%'});
+let drag=null;
+stampEl.addEventListener('pointerdown',e=>{if(e.target===$('resizeHandle'))return;e.preventDefault();const r=pdfView.getBoundingClientRect();drag={x:e.clientX,y:e.clientY,left:stampEl.offsetLeft,top:stampEl.offsetTop,w:r.width,h:r.height};stampEl.setPointerCapture(e.pointerId)});
+stampEl.addEventListener('pointermove',e=>{if(!drag)return;const r=pdfView.getBoundingClientRect();let x=drag.left+(e.clientX-drag.x),y=drag.top+(e.clientY-drag.y);x=Math.max(0,Math.min(r.width-stampEl.offsetWidth,x));y=Math.max(0,Math.min(r.height-stampEl.offsetHeight,y));stampEl.style.left=(x/r.width*100)+'%';stampEl.style.top=(y/r.height*100)+'%';stamp.x=(x+stampEl.offsetWidth/2)/r.width;stamp.y=y/r.height});
+stampEl.addEventListener('pointerup',()=>drag=null);stampEl.addEventListener('pointercancel',()=>drag=null);
+$('resizeHandle').addEventListener('pointerdown',e=>{e.preventDefault();e.stopPropagation();const startX=e.clientX,startW=stampEl.getBoundingClientRect().width,viewW=pdfView.getBoundingClientRect().width;const move=ev=>{const w=Math.max(50,Math.min(viewW*.7,startW+(startX-ev.clientX)));const pct=Math.max(10,Math.min(70,w/viewW*100));$('stampWidth').value=Math.round(pct);$('stampWidthLabel').textContent=Math.round(pct)+'%';stampEl.style.width=pct+'%'};const up=()=>{window.removeEventListener('pointermove',move);window.removeEventListener('pointerup',up)};window.addEventListener('pointermove',move);window.addEventListener('pointerup',up)});
+$('savePdfBtn').addEventListener('click',async()=>{
+ try{if(!pdfBytes||!window.PDFLib){pdfStatus('اختر ملف PDF أولاً.','err');return}refreshSignature();if(!signatureData){pdfStatus('ارسم توقيعك أولاً في القسم أعلاه.','err');return}
+ pdfStatus('جاري تجهيز الملف الموقّع…');const {PDFDocument}=PDFLib;const doc=await PDFDocument.load(pdfBytes);const pages=doc.getPages(),page=pages[currentPage-1];const png=await doc.embedPng(signatureData);const pw=page.getWidth(),ph=page.getHeight(),rect=pdfView.getBoundingClientRect(),stampRect=stampEl.getBoundingClientRect();
+ const x=(stampRect.left-rect.left)/rect.width*pw,yTop=(stampRect.top-rect.top)/rect.height*ph,w=stampRect.width/rect.width*pw,h=stampRect.height/rect.height*ph;
+ page.drawImage(png,{x,y:ph-yTop-h,width:w,height:h});const bytes=await doc.save();downloadBlob(new Blob([bytes],{type:'application/pdf'}),'fahem-signed.pdf');pdfStatus('تم إنشاء نسخة PDF الموقّعة وتنزيلها.','ok')
+ }catch(err){console.error(err);pdfStatus('ما قدرنا نحفظ الملف. قد يكون PDF محمياً بكلمة مرور أو غير مدعوم.','err')}
+});
+function onResize(){resizeCanvas();if(pdfDoc)renderPage().catch(()=>{})}
+if('ResizeObserver' in window)new ResizeObserver(()=>{resizeCanvas()}).observe(canvas);else window.addEventListener('resize',resizeCanvas);
+resizeCanvas();
+})();
+</script>
+</body>
+</html>
